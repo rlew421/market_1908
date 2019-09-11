@@ -30,7 +30,6 @@ class VendorTest < Minitest::Test
   end
 
   def test_adding_stock_adds_to_inventory
-    skip
     @vendor.stock("Peaches", 30)
     @vendor.stock("Peaches", 25)
     @vendor.stock("Tomatoes", 12)

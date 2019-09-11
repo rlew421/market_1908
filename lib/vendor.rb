@@ -7,20 +7,18 @@ class Vendor
   end
 
   def check_stock(product)
-    # inventory has key, then return the value for that key
-    # else, return 0
-    if @inventory.has_key?(product)
-      @inventory[:inventory]
-    end
-  end
-
-  def stock(product, quantity)
-  total_quantity = 0
+    total_quantity = 0
     @inventory.each do |product, quantity|
       total_quantity += quantity
     end
     total_quantity
   end
+
+  def stock(product, quantity)
+      @inventory[product] = check_stock(product) + quantity
+  end
 end
 
 # add quantity to this specific product in our hash
+# need to add quantity to the product by name so it
+# doesn't add quantity to each element in hash
