@@ -20,5 +20,5 @@ class Vendor
 end
 
 # add quantity to this specific product in our hash
-# need to add quantity to the product by name so it
-# doesn't add quantity to each element in hash
+# need to add quantity to the product by key so it
+# doesn't add quantity to each key in the hash
